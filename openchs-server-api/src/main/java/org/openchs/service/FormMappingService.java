@@ -7,6 +7,7 @@ import org.openchs.application.FormType;
 import org.openchs.dao.EncounterTypeRepository;
 import org.openchs.dao.ProgramRepository;
 import org.openchs.dao.SubjectTypeRepository;
+// import org.openchs.dao.ReportTypeRepository;
 import org.openchs.dao.application.FormMappingRepository;
 import org.openchs.dao.application.FormRepository;
 import org.openchs.domain.EncounterType;
@@ -30,6 +31,7 @@ public class FormMappingService {
 
     private final ProgramRepository programRepository;
     private SubjectTypeRepository subjectTypeRepository;
+    // private ReportTypeRepository reportTypeRepository;
     private FormMappingRepository formMappingRepository;
     private EncounterTypeRepository encounterTypeRepository;
     private FormRepository formRepository;
@@ -102,6 +104,7 @@ public class FormMappingService {
                             formMappingRequest.getSubjectTypeUUID()));
         } else {
             formMapping.setSubjectType(subjectTypeRepository.individualSubjectType());
+            // formMapping.setReportType(reportTypeRepository.individualSubjectType());
         }
 
         formMapping.setVoided(formMappingRequest.isVoided());

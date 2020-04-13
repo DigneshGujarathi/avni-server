@@ -1,0 +1,2 @@
+2020-03-30 08:14:38.355 GMT [7024] LOG:  could not open configuration file "/var/lib/pgsql/data/postgresql.conf": Permission denied
+2020-03-30 08:14:38.355 GMT [7024] FATAL:  configuration file "/var/lib/pgsql/data/postgresql.conf" contains errors

@@ -6,6 +6,7 @@ import org.openchs.domain.EncounterType;
 import org.openchs.domain.OrganisationAwareEntity;
 import org.openchs.domain.Program;
 import org.openchs.domain.SubjectType;
+// import org.openchs.domain.ReportType;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.rest.core.config.Projection;
 
@@ -31,6 +32,7 @@ public class FormMapping extends OrganisationAwareEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "subject_type_id")
     private SubjectType subjectType;
+    // private ReportType reportType;
 
     public Form getForm() {
         return form;
@@ -79,5 +81,9 @@ public class FormMapping extends OrganisationAwareEntity {
     public void setSubjectType(SubjectType subjectType) {
         this.subjectType = subjectType;
     }
+
+    // public void setReportType(ReportType reportType) {
+    //     this.reportType = reportType;
+    // }
 
 }
